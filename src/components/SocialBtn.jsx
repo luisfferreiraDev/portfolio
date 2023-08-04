@@ -11,10 +11,8 @@ const SocialBtn = ({ icon, text }) => {
         justifyContent: "center",
       }}
     >
-      <IconButton size="large" sx={{ justifyContent: "center" }}>
-        {icon}
-      </IconButton>
-      <Typography variant="h6" sx={{ textAlign: "center" }}>
+      {icon}
+      <Typography variant="h6" sx={{ textAlign: "center", pl: 2 }}>
         {text}
       </Typography>
     </Box>
