@@ -1,21 +1,43 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, ButtonBase, IconButton, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
-import GitHubIcon from "@mui/icons-material/GitHub";
+const SocialBtn = ({ icon, text, delay = 0, url = "#" }) => {
+  const handleButtonClick = () => {
+    window.open(url, "_blank");
+  };
 
-const SocialBtn = ({ icon, text }) => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+    <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", delay: delay, stiffness: 150 }}
+      style={{ width: "100%", height: "100%" }}
+      className="glass-effect"
     >
-      {icon}
-      <Typography variant="h6" sx={{ textAlign: "center", pl: 2 }}>
-        {text}
-      </Typography>
-    </Box>
+      <ButtonBase
+        onClick={handleButtonClick}
+        sx={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {icon}
+          <Typography variant="h6" sx={{ textAlign: "center", pl: 2 }}>
+            {text}
+          </Typography>
+        </Box>
+      </ButtonBase>
+    </motion.div>
   );
 };
 

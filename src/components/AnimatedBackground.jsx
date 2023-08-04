@@ -6,14 +6,6 @@ const gradientProperties = [
     gradient:
       "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%)",
   },
-  {
-    gradient:
-      "linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%)",
-  },
-  {
-    gradient:
-      "linear-gradient(45deg, rgba(63,61,85,1) 0%, rgba(51,51,51,1) 100%)",
-  },
 ];
 
 const transition = {
@@ -55,6 +47,7 @@ const AnimatedBackground = () => {
         width: "100%",
         height: "100%",
         transformOrigin: "center center",
+        zIndex: -1,
       }}
     />
   );

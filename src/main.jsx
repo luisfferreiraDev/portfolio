@@ -9,6 +9,15 @@ import CssBaseline from "@mui/material/CssBaseline";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    primary: {
+      main: "#ffffff",
+    },
+  },
+});
+
+const lightTheme = createTheme({
+  palette: {
+    mode: "light",
   },
 });
 
@@ -17,6 +26,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <App />
-    </ThemeProvider>{" "}
+    </ThemeProvider>
   </React.StrictMode>
 );

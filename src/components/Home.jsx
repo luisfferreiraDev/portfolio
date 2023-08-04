@@ -11,13 +11,13 @@ import HandymanIcon from "@mui/icons-material/Handyman";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { ButtonBase } from "@mui/material";
+import { Box } from "@mui/material";
 
 //TEXT
 const projectsTitle = "Projects";
 const projectsText = "Some of my professional and personal projects";
 const contactTitle = "Contact me";
-const contactText = "I'll reply as soon as I can";
+const contactText = "Get in touch, I'll reply as soon as I can";
 
 const Home = () => {
   return (
@@ -59,46 +59,40 @@ const Home = () => {
                         <Item></Item>
                       </Grid>
                       <Grid
+                        item
                         xs={4}
                         sx={{
-                          bgcolor: "error.main",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                         }}
                       >
-                        <ButtonBase
-                          onClick={() => console.log("clicked")}
-                          sx={{ width: "100%", height: "100%" }}
-                        >
-                          <Item>
-                            <SocialBtn
-                              icon={<GitHubIcon fontSize="large" />}
-                              text={"GitHub"}
-                            />
-                          </Item>
-                        </ButtonBase>
+                        <Box sx={{ width: "100%", height: "100%" }}>
+                          <SocialBtn
+                            icon={<GitHubIcon fontSize="large" />}
+                            text={"Github"}
+                            delay={0.1}
+                            url={"https://github.com/luisfferreiraDev"}
+                          />
+                        </Box>
                       </Grid>
                       <Grid
+                        item
                         xs={4}
                         sx={{
-                          bgcolor: "warning.main",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                         }}
                       >
-                        <ButtonBase
-                          onClick={() => console.log("clicked")}
-                          sx={{ width: "100%", height: "100%" }}
-                        >
-                          <Item>
-                            <SocialBtn
-                              icon={<LinkedInIcon fontSize="large" />}
-                              text={"LinkedIn"}
-                            />
-                          </Item>
-                        </ButtonBase>
+                        <Box sx={{ width: "100%", height: "100%" }}>
+                          <SocialBtn
+                            icon={<LinkedInIcon fontSize="large" />}
+                            text={"LinkedIn"}
+                            delay={0.2}
+                            url={"https://www.linkedin.com/in/luisfferreira99/"}
+                          />
+                        </Box>
                       </Grid>
                     </Grid>
                   </Item>
@@ -106,48 +100,42 @@ const Home = () => {
                 <Grid
                   xs={4}
                   sx={{
-                    bgcolor: "gray",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
+                    justifyContent: "left",
+                    height: "100%",
                   }}
                 >
-                  <ButtonBase
-                    onClick={() => console.log("clicked")}
-                    sx={{ width: "100%" }}
-                  >
-                    <Item>
-                      <InfoBox
-                        title={projectsTitle}
-                        text={projectsText}
-                        onClick={() => console.log("clicked")}
-                        icon={<HandymanIcon fontSize="large" />}
-                      />
-                    </Item>
-                  </ButtonBase>
+                  <Box sx={{ width: "100%", height: "100%" }}>
+                    <InfoBox
+                      title={projectsTitle}
+                      text={projectsText}
+                      onClick={() => console.log("clicked")}
+                      icon={<HandymanIcon fontSize="large" />}
+                      delay={0.3}
+                      sectionId={"projectsSection"}
+                    />
+                  </Box>
                 </Grid>
                 <Grid
                   xs={4}
                   sx={{
-                    bgcolor: "secondary.main",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
+                    justifyContent: "left",
+                    height: "100%",
                   }}
                 >
-                  <ButtonBase
-                    onClick={() => console.log("clicked")}
-                    sx={{ width: "100%" }}
-                  >
-                    <Item>
-                      <InfoBox
-                        title={contactTitle}
-                        text={contactText}
-                        onClick={() => console.log("clicked")}
-                        icon={<EmailIcon fontSize="large" />}
-                      />
-                    </Item>
-                  </ButtonBase>
+                  <Box sx={{ width: "100%", height: "100%" }}>
+                    <InfoBox
+                      title={contactTitle}
+                      text={contactText}
+                      onClick={() => console.log("clicked")}
+                      icon={<EmailIcon fontSize="large" />}
+                      delay={0.4}
+                      sectionId={"contactsSection"}
+                    />
+                  </Box>
                 </Grid>
               </Grid>
             </Item>

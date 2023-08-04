@@ -13,9 +13,15 @@ function App() {
       <AnimatePresence>
         <AnimatedBackground />
         <Home />
-        <Box sx={{ height: "100vh", bgcolor: "black" }}>ABOUT</Box>
-        <Box sx={{ height: "100vh" }}>PROJECTS</Box>
-        <Box sx={{ height: "100vh" }}>CONTACTS</Box>
+        <Box id="aboutSection" sx={{ height: "100vh", bgcolor: "black" }}>
+          ABOUT
+        </Box>
+        <Box id="projectsSection" sx={{ height: "100vh" }}>
+          PROJECTS
+        </Box>
+        <Box id="contactsSection" sx={{ height: "100vh" }}>
+          CONTACTS
+        </Box>
       </AnimatePresence>
     </>
   );
